@@ -11,11 +11,11 @@ locale                   : "en-US"
 site_theme               : "default"
 title                    : "Gabriele Tori"
 title_separator          : "-"
-name                     : &name "Gabriele Tori"
-description              : &description "Ph.D. Fellow"
+name                     : "Gabriele Tori"
+description              : "Ph.D. Student"
 url                      : https://gtori7499.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "gtori7499.github.io"
+repository               : "gtori7499/gtori7499.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
@@ -77,14 +77,10 @@ author:
   youtube          : # Username
   zhihu            : # Username
 
-# Publication Category - The following the list of publication categories and their headings
+# Tell the Publications page which categories to render, and in what order.
 publication_category:
-  books:
-    title: #'Books'
-  manuscripts:
-    title: #'Journal Articles'    
-  conferences:
-    title: #'Conference Papers'
+  - ["Working Papers",     { title: "Working Papers"    }]
+  - ["Work in Progress",   { title: "Work in Progress"  }]
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
