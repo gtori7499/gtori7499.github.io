@@ -13,14 +13,6 @@ author_profile: true
 
 {% include base_path %}
 
-<!-- DEBUG: mostra quante pubblicazioni trova Jekyll -->
-<p><strong>DEBUG:</strong> ho trovato {{ site.publications | size }} pubblicazioni.</p>
-<ul>
-  {% for post in site.publications %}
-    <li>{{ post.title }} ({{ post.path }})</li>
-  {% endfor %}
-</ul>
-
 <!-- New style rendering if publication categories are defined -->
 {% if site.publication_category %}
   {% for category in site.publication_category %}
