@@ -35,9 +35,9 @@ Work experience
 Working Paper
 ======
 * Does Money Matter? Quasi-Experimental Evidence from the End of Geographic Reserve Requirements
-  * Co-author: Leonardo D'amico (Princeton)
+  * Co-author: Leonardo D'amico (Princeton University)
 
-Softawares
+Softwares
 ======
 * Python, RStudio, STATA, Latex, Canva, MATLAB (Dynare)
 * AWS-textract
