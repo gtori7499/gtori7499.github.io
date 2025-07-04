@@ -11,54 +11,49 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* Ph.D. in Economics, Emory University, 2029 (expected)
+* M.S. in Economics & Social Sciences (ESS/DESS), Bocconi University, 2024
+* Exchange Experience, Amsterdam University, 2022
+* B.S. in Management, Bocconi University, 2021
 
 Work experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* July 2022 - June 2023: Research Assistant
+  * Ph.D. Student Leonardo D'amico (Harvard University, Boston)
+  * Digitization, collection and data cleaning.
+  * Construction of consistent time series of financial data.
+* June 2023 - Dec 2023: Research Assistant
+  * Stefano Gagliarducci (Tor Vergata and EIEF)
+  * Mara Squicciarini (Bocconi University and CEPR)
+  * Marco Tabellini (Harvard Business School, NBER, CEPR)
+  * Data analysis of U.S. census data (IPUMS).
+* Jan 2024 - June 2024: Research Assistant
+  * Edward Glaeser (Harvard Univeristy, Boston)
+  * Ph.D. Leonardo D'Amico (Harvard Univeristy, Boston)
+  * Data collection and cleaning.
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+Working Paper
+======
+* Does Money Matter? Quasi-Experimental Evidence from the End of Geographic Reserve Requirements
+  * Co-author: Leonardo D'amico (Princeton)
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
+Softawares
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Python, RStudio, STATA, Latex, Canva, MATLAB (Dynare)
+* AWS-textract
+* Microsoft Office (Word, Excel, PowerPoint, Outlook)
+* ECDL
 
-Publications
+Language and Skills
 ======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
+* Italian: Native
+* English: Fluent C1 Level
+* French: B1 Level
+
+Other Information
 ======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+Class CNBC, creation of video news, transmitted in subways and airports (2016-2017).
+Volleyball, competitive series D level, CusPavia (2010-2020).
+Creation of short films with a movie critic (2016-2018).
+
+
