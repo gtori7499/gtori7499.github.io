@@ -15,7 +15,3 @@ bibtexurl:
 citation:    
 ---
 
-**Authors:**  
-{% for auth in page.authors %}
-- <span style="color: gray">{{ auth }}</span>
-{% endfor %}
