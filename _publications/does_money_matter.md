@@ -1,5 +1,5 @@
 ---
-layout: archive
+layout: single
 title:       "Does Money Matter? Quasi-Experimental Evidence from the End of Geographic Reserve Requirements"
 collection:  publications      # deve corrispondere al nome della cartella _publications
 category:    "Work in Progress"
