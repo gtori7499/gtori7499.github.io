@@ -21,7 +21,7 @@ layout: default
     {% endunless %}
 
     {%- comment -%}
-    ————— Qui inizia il blocco per il “Published in” —————
+    ————— Qui inizia il blocco per il “Published in” nella pagina singola —————
     {%- endcomment -%}
     {% if page.venue %}
       {% if page.category == "Work in Progress" %}
@@ -34,6 +34,12 @@ layout: default
     ————— Fine del blocco “Published in” —————
     {%- endcomment -%}
 
-    {{ content }}
+    {%- comment -%}
+    ————— Elenco di tutte le pubblicazioni —————
+    {%- endcomment -%}
+    {% for post in site.publications %}
+      {% include archive-single.html post=post type="list" %}
+    {% endfor %}
+
   </div>
 </div>
