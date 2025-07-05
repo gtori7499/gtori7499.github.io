@@ -22,26 +22,23 @@ layout: default
 
     {%- comment -%}
     Ciclo sulle categorie definite in _config.yml → publication_category
-    Ogni elemento è un array: [ chiave, { title: "Titolo da mostrare" } ]
     {%- endcomment -%}
     {% for cat in site.publication_category %}
       {% assign key   = cat[0] %}
       {% assign title = cat[1].title %}
-
-      {%- comment -%}  
-      Intestazione di sezione  
-      {%- endcomment -%}
-      <h2 class="page__subtitle">{{ title }}</h2>
-      <hr>
+      {% assign this_posts = site.publications | where: "category", key %}
 
       {%- comment -%}
-      Prendo tutti i post di questa categoria  
+      Mostro la sezione solo se c’è almeno un post in questa categoria
       {%- endcomment -%}
-      {% assign this_posts = site.publications | where: "category", key %}
-      {% for post in this_posts %}
-        {% include archive-single.html post=post type="list" %}
-      {% endfor %}
-
+      {% if this_posts and this_posts.size > 0 %}
+        <h2 class="page__subtitle">{{ title }}</h2>
+        <hr>
+        {% for post in this_posts %}
+          {% include archive-single.html post=post type="list" %}
+        {% endfor %}
+      {% endif %}
     {% endfor %}
+
   </div>
 </div>
