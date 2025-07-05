@@ -3,24 +3,40 @@ layout: default
 ---
 
 {% include base_path %}
-{% include page__hero.html if needed %}
-{% include breadcrumbs.html if needed %}
+
+{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
+  {% include page__hero.html %}
+{% endif %}
+
+{% if page.url != "/" and site.breadcrumbs %}
+  {% include breadcrumbs.html %}
+{% endif %}
 
 <div id="main" role="main">
   {% include sidebar.html %}
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
     <header>
-      <h1>{{ page.title }}</h1>
-      {% if page.date %}<p>{{ page.date | date: "%B %d, %Y" }}</p>{% endif %}
-      {% if page.venue %}<p><em>{{ page.venue }}</em></p>{% endif %}
-      {% if page.authors %}<p>{{ page.authors }}</p>{% endif %}
+      {% if page.title %}
+        <h1 class="page__title">{{ page.title | escape }}</h1>
+      {% endif %}
+      {% if page.date %}
+        <p class="page__date">
+          <time datetime="{{ page.date | date_to_xmlschema }}">
+            {{ page.date | date: "%B %d, %Y" }}
+          </time>
+        </p>
+      {% endif %}
+      {% if page.venue %}
+        <p><em>{{ page.venue }}</em></p>
+      {% endif %}
+      {% if page.authors %}
+        <p>{{ page.authors }}</p>
+      {% endif %}
     </header>
 
     <section class="page__content" itemprop="text">
       {{ content }}
     </section>
-
-    <!-- eventuali link citation/download… -->
   </article>
 </div>
