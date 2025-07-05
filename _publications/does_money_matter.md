@@ -7,7 +7,7 @@ date:        2025-01-01       # obbligatorio per far comparire il post
 # permalink: "/publications/does_money_matter/"  (opzionale, Jekyll lo calcola da solo)
 excerpt:     
 venue:       "Unpublished manuscript"
-authors:
+author:
   - "Gabriele Tori (Emory University)"
   - "Leonardo D'Amico (Princeton University)"
 slidesurl:   
