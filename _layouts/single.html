@@ -18,14 +18,11 @@ layout: default
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
     <header>
       {% if page.title %}
-        <h1 class="page__title">{{ page.title | escape }}</h1>
+        <h1 class="page__title">{{ page.title }}</h1>
       {% endif %}
-      {% if page.date %}
-        <p class="page__date">
-          <time datetime="{{ page.date | date_to_xmlschema }}">
-            {{ page.date | date: "%B %d, %Y" }}
-          </time>
-        </p>
+      {% if page.category %}
+        <h2 class="page__subtitle">{{ page.category }}</h2>
+        <hr>
       {% endif %}
       {% if page.venue %}
         <p><em>{{ page.venue }}</em></p>
@@ -33,10 +30,17 @@ layout: default
       {% if page.authors %}
         <p>{{ page.authors }}</p>
       {% endif %}
+      {% if page.date %}
+        <p class="page__date">{{ page.date | date: "%Y" }}</p>
+      {% endif %}
     </header>
 
     <section class="page__content" itemprop="text">
+      <!-- qui viene inserito TUTTO il testo sotto il front‐matter -->
       {{ content }}
     </section>
+
+    <!-- qui eventualmente i link Download/Citation -->
+
   </article>
 </div>
