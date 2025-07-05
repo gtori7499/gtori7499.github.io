@@ -15,17 +15,14 @@
       <p class="archive__item-authors">{{ post.author }}</p>
     {% endif %}
 
-    {% if post.collection == 'publications' %}
+    {% if post.collection == "publications" %}
       {% if post.category == "Work in Progress" %}
-        <p><i>{{ post.venue }}</i>, {{ post.date | date: "%Y" }}</p>
+        <p><em>{{ post.venue }}</em>, {{ post.date | date: "%Y" }}</p>
       {% else %}
-        <p>Published in <i>{{ post.venue }}</i>, {{ post.date | date: "%Y" }}</p>
+        <p>Published in <em>{{ post.venue }}</em>, {{ post.date | date: "%Y" }}</p>
       {% endif %}
     {% endif %}
 
-    {# ————— ho rimosso qui ogni blocco `if post.excerpt` ————— #}
-
-    {# ————— eventuali link Download/Citation ————— #}
     {% if post.paperurl %}
       <p><a href="{{ post.paperurl }}">Download Paper</a></p>
     {% endif %}
