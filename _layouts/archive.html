@@ -20,29 +20,28 @@ layout: default
       <h1 class="page__title">{{ page.title }}</h1>
     {% endunless %}
 
-    {%- comment -%} se esiste la variabile `section`, la mostro qui {%- endcomment -%}
-    {% if page.section %}
-      <h2 class="page__subtitle">{{ page.section }}</h2>
+    {%- comment -%}
+    Ciclo sulle categorie definite in _config.yml → publication_category
+    Ogni elemento è un array: [ chiave, { title: "Titolo da mostrare" } ]
+    {%- endcomment -%}
+    {% for cat in site.publication_category %}
+      {% assign key   = cat[0] %}
+      {% assign title = cat[1].title %}
+
+      {%- comment -%}  
+      Intestazione di sezione  
+      {%- endcomment -%}
+      <h2 class="page__subtitle">{{ title }}</h2>
       <hr>
-    {% endif %}
 
-    {%- comment -%}
-    — Blocchetto “Published in” (per le pagine di dettaglio) ——
-    {%- endcomment -%}
-    {% if page.venue %}
-      {% if page.category == "Work in Progress" %}
-        <p><em>{{ page.venue }}</em></p>
-      {% else %}
-        <p><em>Published in {{ page.venue }}</em></p>
-      {% endif %}
-    {% endif %}
+      {%- comment -%}
+      Prendo tutti i post di questa categoria  
+      {%- endcomment -%}
+      {% assign this_posts = site.publications | where: "category", key %}
+      {% for post in this_posts %}
+        {% include archive-single.html post=post type="list" %}
+      {% endfor %}
 
-    {%- comment -%}
-    — Ciclo di tutte le pubblicazioni ——
-    {%- endcomment -%}
-    {% for post in site.publications %}
-      {% include archive-single.html post=post type="list" %}
     {% endfor %}
-
   </div>
 </div>
