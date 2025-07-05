@@ -20,8 +20,14 @@ layout: default
       <h1 class="page__title">{{ page.title }}</h1>
     {% endunless %}
 
+    {%- comment -%} se esiste la variabile `section`, la mostro qui {%- endcomment -%}
+    {% if page.section %}
+      <h2 class="page__subtitle">{{ page.section }}</h2>
+      <hr>
+    {% endif %}
+
     {%- comment -%}
-    ————— Qui inizia il blocco per il “Published in” nella pagina singola —————
+    — Blocchetto “Published in” (per le pagine di dettaglio) ——
     {%- endcomment -%}
     {% if page.venue %}
       {% if page.category == "Work in Progress" %}
@@ -30,12 +36,9 @@ layout: default
         <p><em>Published in {{ page.venue }}</em></p>
       {% endif %}
     {% endif %}
-    {%- comment -%}
-    ————— Fine del blocco “Published in” —————
-    {%- endcomment -%}
 
     {%- comment -%}
-    ————— Elenco di tutte le pubblicazioni —————
+    — Ciclo di tutte le pubblicazioni ——
     {%- endcomment -%}
     {% for post in site.publications %}
       {% include archive-single.html post=post type="list" %}
