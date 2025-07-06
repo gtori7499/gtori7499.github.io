@@ -42,18 +42,16 @@ layout: default
       {% comment %} qui eventualmente i link Download/Citation {% endcomment %}
     </article>
 
-  {% else %}
+    {% else %}
     <!-- Layout generico per CV, pagine, posts… -->
     <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
       <header>
-        {% if page.title %}
-          <h1 class="page__title">{{ page.title }}</h1>
-        {% endif %}
         {% unless page.permalink == "/" %}
-         {% if page.title %}
-           <h1 class="page__title">{{ page.title }}</h1>
-         {% endif %}
-       {% endunless %}
+          {% if page.title %}
+            <h1 class="page__title">{{ page.title }}</h1>
+          {% endif %}
+        {% endunless %}
+
         {% if page.read_time %}
           <p class="page__meta">
             <i class="fa fa-clock" aria-hidden="true"></i>
@@ -72,8 +70,8 @@ layout: default
       <section class="page__content" itemprop="text">
         {{ content }}
       </section>
-      {% comment %} eventuali blocchi citation/download per altri tipi di pagina {% endcomment %}
     </article>
   {% endif %}
+
 
 </div>
